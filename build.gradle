@@ -51,6 +51,15 @@ dependencies {
 
 }
 
+
+sourceSets {
+    main {
+        java {
+            srcDir "${buildDir.absolutePath}/generated/source/proto/main"
+        }
+    }
+}
+
 protobuf {
     protoc {
         artifact = "com.google.protobuf:protoc:3.5.1-1"

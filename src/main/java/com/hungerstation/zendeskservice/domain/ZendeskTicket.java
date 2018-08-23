@@ -77,6 +77,14 @@ public class ZendeskTicket {
         this.relatedToId = relatedToId;
     }
 
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

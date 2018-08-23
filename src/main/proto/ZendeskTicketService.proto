@@ -3,7 +3,7 @@ syntax = "proto3";
 option java_multiple_files = true;
 package com.hungerstation.zendesk_ticket.grpc.services;
 option java_outer_classname = "ZendeskTicketProtos";
-
+import "google/protobuf/timestamp.proto";
 
 
 message Id {
@@ -14,6 +14,9 @@ message Id {
 message ZendeskTicket {
     string related_to_type = 1;
     int64 related_to_id = 2;
+    string zendesk_reference_id = 3;
+    google.protobuf.Timestamp created_at = 4;
+
 }
 
 service ZendeskTicketService {
